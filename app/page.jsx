@@ -38,9 +38,9 @@ export default function HomePage() {
         <div className="heroInner">
           <div className="heroCopy">
             <p className="eyebrow">Technology Consulting • AI • Education • Government • Enterprise</p>
-            <h1>Digital Transformation Across Africa</h1>
+            <h1>Technology Solutions for Government, Education & Enterprise</h1>
             <p className="lead">
-              BestBean Ltd partners with governments, educational institutions and enterprises to plan, license, implement and support mission-critical technology initiatives.
+              BestBean Ltd helps institutions plan, license, implement and support practical technology programs across Africa.
             </p>
             <div className="actions">
               <a className="primary" href="#contact">Request Consultation</a>
@@ -53,7 +53,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="heroPanel" aria-label="BestBean strategic focus">
-            <div className="photoBlock photoLarge"><span>Executive Briefings</span></div>
+            <div className="photoBlock photoLarge"><span>Executive Programs</span></div>
             <div className="photoGrid">
               <div className="photoBlock"><span>Smart Classrooms</span></div>
               <div className="photoBlock accent"><span>AI Programs</span></div>

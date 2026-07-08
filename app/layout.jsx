@@ -2,8 +2,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'BestBean Ltd | Technology Consulting, AI & Digital Transformation',
-  description:
-    'BestBean Ltd delivers technology consulting, AI solutions, educational technology, enterprise software and government digital transformation programs across Africa.',
+  description: 'BestBean Ltd delivers technology consulting, AI solutions, educational technology, government digital transformation, and enterprise software across Africa.',
 };
 
 export default function RootLayout({ children }) {

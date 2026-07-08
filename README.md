@@ -1,3 +1,3 @@
-# BestBean Ltd Corporate Website v4
+# BestBean Ltd Corporate Website v6
 
-Enterprise authority homepage for BestBean Ltd.
+Executive corporate website for BestBean Ltd.

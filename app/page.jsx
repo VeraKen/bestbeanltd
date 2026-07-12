@@ -1,169 +1,115 @@
-const engagements = [
-  {
-    title: 'ExamSphere AI Learning Platform',
-    text: 'Adaptive WAEC and JAMB preparation with unique questions, Ask Ade AI Tutor, weak-topic analysis, student reports and parent visibility.',
-    meta: 'AI Assessment • Parent Reports • Student Success'
-  },
-  {
-    title: 'National Education Device Management Platform',
-    text: 'Device enrollment, GPS visibility, policy controls, device health, classroom oversight and ministry-level reporting for large education deployments.',
-    meta: 'MDM • GPS • Ministry Dashboard'
-  },
-  {
-    title: 'BenQ Interactive Classroom Solutions',
-    text: 'Smart classroom deployment with EDLA interactive displays, teacher enablement, training, installation and institutional rollout support.',
-    meta: 'Interactive Displays • Training • Rollout'
-  },
-  {
-    title: 'Enterprise AI & Digital Transformation',
-    text: 'Executive advisory, AI readiness, workflow modernization, technology licensing, implementation governance and long-term support.',
-    meta: 'AI Strategy • Licensing • Implementation'
-  }
+import AskAdeCorporate from "./components/AskAdeCorporate";
+import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
+import { portfolio } from "../lib/portfolio";
+
+const operatingModel = [
+  ["Discover", "Define the problem, users, economics and measurable outcome."],
+  ["Design", "Shape the strategy, architecture, commercial model and implementation plan."],
+  ["Build", "Develop, configure or integrate the right technology ecosystem."],
+  ["Deploy", "Manage rollout, training, governance and operational readiness."],
+  ["Scale", "Measure results, strengthen performance and expand adoption."],
 ];
 
-const capabilities = [
-  ['AI Strategy & Implementation', 'Practical AI adoption, automation planning, workflow modernization and intelligent systems deployment.'],
-  ['Government Digital Transformation', 'Programs, platforms and implementation support for ministries, agencies and public institutions.'],
-  ['Educational Technology', 'Smart classrooms, assessment platforms, teacher enablement and technology-enabled learning environments.'],
-  ['Enterprise Software', 'Systems planning, platform selection, integration oversight and deployment support.'],
-  ['Technology Licensing', 'Commercialization, vendor coordination, procurement support and partner engagement.'],
-  ['Infrastructure & Support', 'Deployment planning, device programs, cloud services and long-term operational support.']
+const proof = [
+  ["6", "Strategic business lines"],
+  ["AI", "Embedded across the portfolio"],
+  ["360°", "Strategy through implementation"],
+  ["Africa", "Designed for local scale"],
 ];
-
-const industries = ['Federal Government','State Governments','Universities','Schools','Financial Services','Healthcare','Manufacturing','NGOs'];
 
 export default function Home() {
   return (
     <main>
-      <nav className="nav">
-        <a className="brand" href="#top"><span>B</span>BestBean Ltd</a>
-        <div className="links">
-          <a href="#about">About</a>
-          <a href="#capabilities">Capabilities</a>
-          <a href="#engagements">Engagements</a>
-          <a href="#leadership">Leadership</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <a className="navCta" href="#contact">Schedule Consultation</a>
-      </nav>
+      <SiteHeader />
 
-      <section className="hero" id="top">
+      <section className="hero rc6Hero" id="top">
         <div className="heroText">
-          <p className="eyebrow">Technology Consulting • AI • Education • Government • Enterprise</p>
-          <h1>Technology Solutions for Government, Education & Enterprise</h1>
-          <p className="lead">BestBean Ltd helps institutions plan, license, implement and support mission-critical technology programs across Africa.</p>
+          <p className="eyebrow">BestBean Ltd • African Technology Group</p>
+          <h1>AI platforms and digital solutions built to deliver results.</h1>
+          <p className="lead">
+            We conceive, build, deploy and operate technology for education,
+            government and enterprise—combining owned platforms, strategic
+            partnerships and implementation discipline under one accountable company.
+          </p>
           <div className="actions">
-            <a className="btn primary" href="#contact">Request Consultation</a>
-            <a className="btn secondary" href="#engagements">View Active Engagements</a>
+            <a className="btn primary" href="#portfolio">Explore the Portfolio</a>
+            <a className="btn secondary" href="/contact">Discuss an Initiative</a>
           </div>
-          <div className="stats">
-            <div><strong>20+</strong><span>Years Leadership</span></div>
-            <div><strong>AI</strong><span>Implementation</span></div>
-            <div><strong>GovTech</strong><span>Ready</span></div>
+          <div className="proofBar">
+            {proof.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}
           </div>
         </div>
 
-        <div className="dashboard" aria-label="BestBean delivery dashboard">
-          <div className="dashTop">
-            <div>
-              <span className="dashLabel">BestBean Delivery Dashboard</span>
-              <h2>Strategy → Licensing → Deployment → Support</h2>
-            </div>
-            <span className="live">LIVE</span>
-          </div>
-          <div className="dashGrid">
-            <div className="dashCard wide">
-              <span>Executive Programs</span>
-              <b>Digital Transformation Roadmaps</b>
-              <p>Board-level advisory for ministries, universities and enterprise leadership teams.</p>
-            </div>
-            <div className="dashCard">
-              <span>Education</span>
-              <b>Smart Classrooms</b>
-              <p>Interactive displays, teacher training and school rollout support.</p>
-            </div>
-            <div className="dashCard accent">
-              <span>AI</span>
-              <b>AI Programs</b>
-              <p>Automation, governance and practical adoption.</p>
-            </div>
-            <div className="dashCard">
-              <span>Government</span>
-              <b>Public Sector Delivery</b>
-              <p>MDM, dashboards, procurement and implementation support.</p>
-            </div>
-            <div className="dashCard whiteCard">
-              <span>Enterprise Authority</span>
-              <b>Plan. License. Implement. Support.</b>
-              <p>End-to-end execution for serious institutions.</p>
-            </div>
+        <div className="executiveConsole" aria-label="BestBean portfolio overview">
+          <div className="consoleHeader"><span>BESTBEAN PORTFOLIO</span><b>LIVE</b></div>
+          <div className="consoleParent"><span>B</span><div><small>PARENT TECHNOLOGY COMPANY</small><strong>BestBean Ltd</strong></div></div>
+          <div className="consoleGrid">
+            {portfolio.map((item) => (
+              <a className={item.featured ? "consoleItem consoleFeatured" : "consoleItem"} href={`/solutions/${item.slug}`} key={item.slug}>
+                <span>{item.number}</span><div><strong>{item.title}</strong><small>{item.label}</small></div><b>→</b>
+              </a>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="trustStrip">
-        <span>Trusted Technology Partner</span>
-        <b>AI Solutions</b>
-        <b>Digital Transformation</b>
-        <b>Educational Technology</b>
-        <b>Enterprise Infrastructure</b>
-        <b>Implementation Support</b>
+      <section className="credibilityBand">
+        <span>Built for institutional outcomes</span>
+        <b>Owned Platforms</b><b>Government Programs</b><b>Education Technology</b><b>Enterprise Transformation</b><b>SaaS Innovation</b>
       </section>
 
-      <section className="split cream" id="about">
-        <div><p className="eyebrow dark">Who We Are</p><h2>Built for serious technology programs.</h2></div>
-        <div><p>BestBean Ltd is a technology consulting and solutions company focused on institutional transformation. We help organizations move from strategy to deployment with practical guidance, technology partnerships, implementation discipline and long-term support.</p><p>Our work spans AI adoption, educational technology, government digital services, enterprise software, device management and technology licensing.</p></div>
-      </section>
-
-      <section className="darkSection" id="engagements">
-        <p className="eyebrow">Current Strategic Engagements</p>
-        <h2>Active platforms and delivery programs.</h2>
-        <div className="cards four">
-          {engagements.map((item, index) => <article className="engageCard" key={item.title}><span>0{index+1}</span><h3>{item.title}</h3><p>{item.text}</p><small>{item.meta}</small></article>)}
+      <section className="portfolioSection cream" id="portfolio">
+        <div className="sectionIntro">
+          <div><p className="eyebrow dark">The BestBean Portfolio</p><h2>Six focused growth engines. One trusted technology partner.</h2></div>
+          <p>Each business line has a defined customer, commercial role and path to scale. Together they form a diversified technology group anchored in measurable outcomes.</p>
+        </div>
+        <div className="rc6PortfolioGrid">
+          {portfolio.map((item) => (
+            <a className={item.featured ? "rc6PortfolioCard flagship" : "rc6PortfolioCard"} href={`/solutions/${item.slug}`} key={item.slug}>
+              <div className="cardHead"><span>{item.number}</span><small>{item.featured ? "FLAGSHIP PLATFORM" : item.label}</small></div>
+              <h3>{item.title}</h3><p>{item.description}</p>
+              <div className="cardFoot"><small>{item.audience}</small><b>Explore solution →</b></div>
+            </a>
+          ))}
         </div>
       </section>
 
-      <section className="cream" id="capabilities">
-        <p className="eyebrow dark">Strategic Capabilities</p>
-        <h2>Advisory, platforms and implementation under one roof.</h2>
-        <div className="cards three">
-          {capabilities.map(([title, text]) => <article className="capCard" key={title}><div className="icon"/><h3>{title}</h3><p>{text}</p></article>)}
+      <section className="productShowcase">
+        <div className="productCopy">
+          <p className="eyebrow">Flagship Product</p>
+          <h2>ExamSphere makes exam preparation measurable.</h2>
+          <p>Adaptive practice, unique question generation, weak-topic analysis, student intelligence, parent reporting and Ask Ade AI tutoring—built for WAEC, JAMB and the broader examination market.</p>
+          <div className="pills darkPills"><span>Adaptive Practice</span><span>Ask Ade AI Tutor</span><span>Parent Reports</span><span>Student Intelligence</span></div>
+          <a className="btn primary" href="/solutions/examsphere">View ExamSphere</a>
+        </div>
+        <div className="deviceStage" aria-label="ExamSphere product preview">
+          <div className="laptopMockup"><div className="mockTop"><span>ExamSphere</span><small>Student Success Center</small></div><div className="mockStats"><div><b>78%</b><small>Readiness</small></div><div><b>12</b><small>Topics mastered</small></div><div><b>4</b><small>Focus areas</small></div></div><div className="mockChart"><i/><i/><i/><i/><i/><i/></div><div className="mockRows"><span/><span/><span/></div></div>
+          <div className="phoneMockup"><small>Ask Ade</small><strong>How can I help you improve today?</strong><span>Practice Algebra</span><span>Review weak topics</span></div>
         </div>
       </section>
 
-      <section className="method">
-        <p className="eyebrow dark">Delivery Methodology</p>
-        <h2>From strategy to measurable execution.</h2>
-        <div className="steps">
-          {['Discover','Design','License','Implement','Train','Support','Measure'].map((s) => <div key={s}>{s}</div>)}
-        </div>
+      <section className="method cream" id="model">
+        <div className="sectionIntro"><div><p className="eyebrow dark">BestBean Operating Model</p><h2>From strategic intent to scaled operating results.</h2></div><p>We remain accountable beyond the recommendation—through architecture, implementation, adoption, measurement and scale.</p></div>
+        <div className="timelineGrid">{operatingModel.map(([title,text],index)=><article key={title}><span>0{index+1}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
       </section>
 
-      <section className="leadership" id="leadership">
-        <div className="portrait">KS</div>
-        <div><p className="eyebrow dark">Leadership</p><h2>Kenneth Spann, JD, MBA</h2><p>Founder and Principal Consultant with experience across technology leadership, business consulting, enterprise software, education and international market development.</p><div className="pills"><span>Technology Strategy</span><span>Enterprise Consulting</span><span>Education Innovation</span><span>International Experience</span></div></div>
+      <section className="institutionalSection">
+        <div><p className="eyebrow">Government, Education & Enterprise</p><h2>Designed for complexity, accountability and national scale.</h2><p>BestBean combines executive advisory, product ownership, sector expertise and implementation discipline to solve high-value institutional problems.</p></div>
+        <div className="institutionalCards"><article><span>01</span><h3>Government-grade delivery</h3><p>Governance, procurement awareness, stakeholder alignment and deployment control.</p></article><article><span>02</span><h3>Education specialization</h3><p>Platforms, classrooms, devices, analytics and capacity building in one ecosystem.</p></article><article><span>03</span><h3>Outcome-led AI</h3><p>Automation and intelligence tied to operating metrics—not technology theatre.</p></article></div>
       </section>
 
-      <section className="cream industries">
-        <p className="eyebrow dark">Industries Served</p>
-        <h2>Built for institutions that need reliable execution.</h2>
-        <div>{industries.map((i) => <span key={i}>{i}</span>)}</div>
-      </section>
-
-      <section className="darkSection">
-        <p className="eyebrow">Why Governments Choose BestBean</p>
-        <h2>Strategy before technology. Execution after strategy.</h2>
-        <div className="proofGrid">
-          <p>Vendor-neutral advisory</p><p>Technology licensing support</p><p>Implementation governance</p><p>Capacity building and training</p><p>Local execution with international standards</p><p>Long-term operational support</p>
-        </div>
+      <section className="leadership rc6Leadership" id="leadership">
+        <div className="portrait executivePortrait">KS</div>
+        <div><p className="eyebrow dark">Executive Leadership</p><h2>Kenneth Spann, JD, MBA</h2><p>Founder and Principal Consultant with experience spanning technology leadership, enterprise consulting, education, commercial strategy and international market development.</p><div className="pills"><span>Technology Strategy</span><span>Enterprise Consulting</span><span>Education Innovation</span><span>Market Development</span></div><a className="textLink" href="/leadership">View leadership profile →</a></div>
       </section>
 
       <section className="contact cream" id="contact">
-        <div><p className="eyebrow dark">Executive Consultation</p><h2>Let's discuss your next technology initiative.</h2><p>For consulting, partnerships, licensing, government programs, education technology or enterprise digital transformation.</p></div>
-        <div className="contactCard"><strong>Ken.Spann@bestbeanltd.com</strong><strong>info@bestbeanltd.com</strong><span>Lagos, Nigeria</span><span>Business Consulting • AI • Educational Technology</span></div>
+        <div><p className="eyebrow dark">Executive Consultation</p><h2>Bring us the outcome you need to create.</h2><p>Discuss AI transformation, government programs, ExamSphere partnerships, BenQ deployments, device management or a new SaaS opportunity.</p></div>
+        <div className="contactCard"><span className="contactLabel">BestBean Ltd</span><a href="mailto:Ken.Spann@bestbeanltd.com">Ken.Spann@bestbeanltd.com</a><a href="mailto:info@bestbeanltd.com">info@bestbeanltd.com</a><span>Lagos, Nigeria</span><a className="contactButton" href="/contact">Request Consultation</a></div>
       </section>
 
-      <footer><div className="brand"><span>B</span>BestBean Ltd</div><p>Technology Consulting • AI Solutions • Educational Technology • Government Digital Transformation</p></footer>
+      <SiteFooter /><AskAdeCorporate />
     </main>
   );
 }

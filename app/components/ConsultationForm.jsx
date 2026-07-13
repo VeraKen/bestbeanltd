@@ -11,7 +11,7 @@ export default function ConsultationForm(){
  }
  return <form className="consultationForm" onSubmit={submit}>
   <div className="formGrid"><label>Name<input name="name" required /></label><label>Organization<input name="organization" required /></label><label>Email<input type="email" name="email" required /></label><label>Phone<input name="phone" /></label></div>
-  <label>Area of interest<select name="interest" required><option value="">Select a solution</option><option>ExamSphere.app</option><option>Education Device Management Platform</option><option>Government AI Solutions</option><option>BenQ Education Solutions</option><option>Enterprise AI Consulting</option><option>Future SaaS Products</option></select></label>
+  <label>Area of interest<select name="interest" required><option value="">Select a solution</option><option>Exansphere.APP</option><option>Education Device Management Platform</option><option>Government AI Solutions</option><option>BenQ Education Solutions</option><option>Enterprise AI Consulting</option><option>Future SaaS Products</option></select></label>
   <label>What outcome do you need to create?<textarea name="message" rows="6" required /></label>
   <button className="btn primary formSubmit" type="submit">Prepare Consultation Request</button>
   {sent && <p className="formNote">Your email application has opened with the completed request.</p>}

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const QUICK_PROMPTS = [
   "Show me the BestBean portfolio",
-  "Tell me about ExamSphere",
+  "Tell me about Exansphere.APP",
   "Government AI solutions",
   "Device management platform",
   "Schedule a consultation",
@@ -14,12 +14,12 @@ const RESPONSES = [
   {
     keywords: ["portfolio", "business lines", "products", "what does", "bestbean", "company"],
     answer:
-      "BestBean Ltd is the parent technology company for six strategic business lines: ExamSphere.app, the Education Device Management Platform, Government AI Solutions, BenQ Education Solutions, Enterprise AI Consulting and a pipeline of Future SaaS Products.",
+      "BestBean Ltd is the parent technology company for six strategic business lines: Exansphere.APP, the Education Device Management Platform, Government AI Solutions, BenQ Education Solutions, Enterprise AI Consulting and a pipeline of Future SaaS Products.",
   },
   {
     keywords: ["examsphere", "waec", "jamb", "learning platform", "student", "parent"],
     answer:
-      "ExamSphere.app is BestBean's flagship AI learning platform. It combines adaptive exam preparation, unique practice questions, weak-topic analysis, student success reporting, parent visibility and Ask Ade AI tutoring. It is being built to support WAEC, JAMB, NECO, IGCSE, SAT and Common Entrance over time.",
+      "Exansphere.APP is BestBean's flagship AI learning platform. It combines adaptive exam preparation, unique practice questions, weak-topic analysis, student success reporting, parent visibility and Ask Ade AI tutoring. It is being built to support WAEC, JAMB, NECO, IGCSE, SAT and Common Entrance over time.",
   },
   {
     keywords: ["device", "mdm", "gps", "tablet", "ministry platform", "management platform"],
@@ -69,7 +69,7 @@ function findResponse(input) {
   }
   return bestMatch || {
     answer:
-      "I can explain BestBean's six business lines: ExamSphere.app, Education Device Management, Government AI, BenQ Education, Enterprise AI Consulting and Future SaaS Products. Ask about any one of them or request a consultation.",
+      "I can explain BestBean's six business lines: Exansphere.APP, Education Device Management, Government AI, BenQ Education, Enterprise AI Consulting and Future SaaS Products. Ask about any one of them or request a consultation.",
   };
 }
 

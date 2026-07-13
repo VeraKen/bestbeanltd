@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata={title:"Industries | BestBean Ltd",description:"BestBean AI and technology solutions for government, education, financial services, healthcare, enterprise and development organizations."};
 const industries=[
  ["Government & Public Sector","Modernize services, automate workflows, improve executive visibility and deploy accountable technology at scale.","Government AI Solutions"],
- ["Education","Improve teaching, learning, exam readiness, classroom technology and oversight of digital-learning devices.","ExamSphere and BenQ Education"],
+ ["Education","Improve teaching, learning, exam readiness, classroom technology and oversight of digital-learning devices.","Exansphere.APP and BenQ Education"],
  ["Financial Services","Apply governed AI to service, operations, risk, reporting, customer experience and workforce productivity.","Enterprise AI Consulting"],
  ["Healthcare","Use decision support, workflow automation and information systems to improve operational performance and access.","Enterprise AI Consulting"],
  ["Large Enterprises","Build practical AI roadmaps, redesign priority workflows and establish governance for scalable adoption.","Enterprise AI Consulting"],

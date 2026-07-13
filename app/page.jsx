@@ -78,14 +78,31 @@ export default function Home() {
       <section className="productShowcase">
         <div className="productCopy">
           <p className="eyebrow">Flagship Product</p>
-          <h2>ExamSphere makes exam preparation measurable.</h2>
+          <h2>Exansphere.APP makes exam preparation measurable.</h2>
           <p>Adaptive practice, unique question generation, weak-topic analysis, student intelligence, parent reporting and Ask Ade AI tutoring—built for WAEC, JAMB and the broader examination market.</p>
           <div className="pills darkPills"><span>Adaptive Practice</span><span>Ask Ade AI Tutor</span><span>Parent Reports</span><span>Student Intelligence</span></div>
-          <a className="btn primary" href="/solutions/examsphere">View ExamSphere</a>
+          <a className="btn primary" href="/solutions/examsphere">View Exansphere.APP</a>
         </div>
-        <div className="deviceStage" aria-label="ExamSphere product preview">
-          <div className="laptopMockup"><div className="mockTop"><span>ExamSphere</span><small>Student Success Center</small></div><div className="mockStats"><div><b>78%</b><small>Readiness</small></div><div><b>12</b><small>Topics mastered</small></div><div><b>4</b><small>Focus areas</small></div></div><div className="mockChart"><i/><i/><i/><i/><i/><i/></div><div className="mockRows"><span/><span/><span/></div></div>
+        <div className="deviceStage" aria-label="Exansphere.APP product preview">
+          <div className="laptopMockup"><div className="mockTop"><span>Exansphere.APP</span><small>Student Success Center</small></div><div className="mockStats"><div><b>78%</b><small>Readiness</small></div><div><b>12</b><small>Topics mastered</small></div><div><b>4</b><small>Focus areas</small></div></div><div className="mockChart"><i/><i/><i/><i/><i/><i/></div><div className="mockRows"><span/><span/><span/></div></div>
           <div className="phoneMockup"><small>Ask Ade</small><strong>How can I help you improve today?</strong><span>Practice Algebra</span><span>Review weak topics</span></div>
+        </div>
+      </section>
+
+      <section className="humanLedSection">
+        <div className="humanLedIntro">
+          <p className="eyebrow">Human-Led Technology</p>
+          <h2>Judgment, architecture and governance remain human responsibilities.</h2>
+          <p>BestBean products are human-conceived, human-directed and human-governed. AI accelerates implementation, analysis and iteration; it does not replace accountable product ownership, institutional judgment or expert validation.</p>
+        </div>
+        <div className="humanLedGrid">
+          <article><span>01</span><h3>Human-conceived</h3><p>Product vision, business logic, learning methodology and institutional outcomes are defined by BestBean leadership and domain experts.</p></article>
+          <article><span>02</span><h3>AI-assisted engineering</h3><p>Artificial intelligence is used as a disciplined software-engineering and productivity tool under continuous architectural supervision.</p></article>
+          <article><span>03</span><h3>Governed intelligence</h3><p>Platforms evolve through structured testing, documented decisions, expert review, deployment records and measurable performance feedback.</p></article>
+        </div>
+        <div className="ipStatement">
+          <small>PROPRIETARY EDUCATIONAL INTELLIGENCE</small>
+          <p>Exansphere.APP is a proprietary, human-supervised assessment and learning system comprising validated content, structured pedagogical taxonomies, adaptive algorithms, curated databases, original software and continuously improved educational intelligence.</p>
         </div>
       </section>
 
@@ -105,7 +122,7 @@ export default function Home() {
       </section>
 
       <section className="contact cream" id="contact">
-        <div><p className="eyebrow dark">Executive Consultation</p><h2>Bring us the outcome you need to create.</h2><p>Discuss AI transformation, government programs, ExamSphere partnerships, BenQ deployments, device management or a new SaaS opportunity.</p></div>
+        <div><p className="eyebrow dark">Executive Consultation</p><h2>Bring us the outcome you need to create.</h2><p>Discuss AI transformation, government programs, Exansphere.APP partnerships, BenQ deployments, device management or a new SaaS opportunity.</p></div>
         <div className="contactCard"><span className="contactLabel">BestBean Ltd</span><a href="mailto:Ken.Spann@bestbeanltd.com">Ken.Spann@bestbeanltd.com</a><a href="mailto:info@bestbeanltd.com">info@bestbeanltd.com</a><span>Lagos, Nigeria</span><a className="contactButton" href="/contact">Request Consultation</a></div>
       </section>
 
